@@ -19,9 +19,14 @@ ol, ul {
 table {
     border-collapse: collapse;
 }
+table.gridtable {   border-width: 1px; border-color: #666666; border-collapse: collapse; } 
 
+table.gridtable th { border-width: 1px; padding: 8px; border-style: solid; border-color: #666666; background-color: #dedede; } 
+
+table.gridtable td { border-width: 1px; padding: 8px; border-style: solid; border-color: #666666; background-color: #ffffff; }
 td {
     padding-right: 10px;
+	text-align: center;
 }
 
 a {
