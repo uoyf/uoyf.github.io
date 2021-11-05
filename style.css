@@ -12,21 +12,35 @@ html, body, input, textarea {
     line-height: 20px;
 }
 
-ol, ul {
-    list-style: outside none none;
-}
-
 table {
     border-collapse: collapse;
 }
-table.gridtable {   border-width: 1px; border-color: #666666; border-collapse: collapse; } 
 
-table.gridtable th { border-width: 1px; padding: 8px; border-style: solid; border-color: #666666; background-color: #dedede; } 
+table.gridtable {
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
 
-table.gridtable td { border-width: 1px; padding: 8px; border-style: solid; border-color: #666666; background-color: #ffffff; }
+table.gridtable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #DEDEDE;
+}
+
+table.gridtable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #FFFFFF;
+}
+
 td {
     padding-right: 10px;
-	text-align: center;
+    text-align: center;
 }
 
 a {
@@ -73,6 +87,10 @@ sub {
 
 .page-container {
     min-width: 800px;
+}
+
+.page-header ol, ul {
+    list-style: outside none;
 }
 
 .page-container.header {
@@ -202,13 +220,13 @@ sub {
 .main-content-left {
     float: left;
     margin: 20px 0;
-    max-width: 72%;
+    width: 72%;
 }
 
 .main-content-right {
     float: right;
     margin: 20px 0;
-    max-width: 28%;
+    width: 28%;
 }
 
 .main-content {
@@ -216,8 +234,17 @@ sub {
     margin-bottom: 20px;
 }
 
+.main-content ol, ul {
+    list-style-position: outside;
+    margin-left: 20px;
+}
+
+.main-content li {
+    padding-bottom: 6px;
+}
+
 .main-content.shaded {
-    background-color: #EEEEEE;
+    background-color: #F0F0F0;
 }
 
 .main-content-title {
@@ -229,7 +256,6 @@ sub {
 
 .main-content-paragraph {
     font-size: 16px;
-    margin-bottom: 8px;
     padding: 10px;
 }
 
