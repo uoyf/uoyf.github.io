@@ -74,7 +74,7 @@ sub {
     overflow-y: scroll;
     position: absolute;
     right: 0;
-    top: 125px;
+    top: 250px;
     transition: top 0.5s ease 0s;
 }
 
@@ -86,7 +86,7 @@ sub {
 }
 
 .page-container {
-    min-width: 800px;
+    min-width: 1100px;
 }
 
 .page-header ol, ul {
@@ -95,18 +95,18 @@ sub {
 
 .page-container.header {
     background: url("images/header.jpg") no-repeat scroll center bottom #ffffff;
-    border-bottom: 1px solid #ffffff;
-    border-top: 1px solid #ffffff;
-    outline: 1px solid #cccccc;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    outline: 1px solid #CCCCCC;
     position: relative;
     z-index: 2;
 }
 
 .page-container.top-bar {
-    background: none repeat scroll 0 0 #f0f0f0;
-    border-top: 1px solid #cccccc;
-    border-bottom: 1px solid #cccccc;
-    box-shadow: 0 0 3px #cccccc;
+    background: none repeat scroll 0 0 #F0F0F0;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    box-shadow: 0 0 3px #CCCCCC;
     position: relative;
     top: 0;
     transition: top 0.5s ease 0s;
@@ -115,8 +115,8 @@ sub {
 }
 
 .page-container.footer {
-    background: none repeat scroll 0 0 #f0f0f0;
-    border-top: 1px solid #cccccc;
+    background: none repeat scroll 0 0 #F0F0F0;
+    border-top: 1px solid #CCCCCC;
     bottom: 0;
     height: 32px;
     position: absolute;
@@ -125,8 +125,8 @@ sub {
 
 .page-container-inner {
     margin: 0 auto;
-    padding: 0 20px;
-    width: 800px;
+    padding: 0 6px;
+    width: 1100px;
 }
 
 .page-container-inner:before, .page-container-inner:after {
@@ -142,8 +142,8 @@ sub {
 
 .flexrow-header {
     display: block;
-    margin: -20px 0 0 -20px;
-    padding: 27px 0;
+    margin: 0;
+    padding: 0;
     transition: padding 0.5s ease 0s;
 }
 
@@ -161,7 +161,7 @@ sub {
 .flexrow-header-item-inner {
     display: block;
     font-size: 24px;
-    line-height: 30px;
+    line-height: 189px;
     padding: 0 0 7px;
 }
 
@@ -220,13 +220,13 @@ sub {
 .main-content-left {
     float: left;
     margin: 20px 0;
-    width: 72%;
+    width: 75%;
 }
 
 .main-content-right {
     float: right;
     margin: 20px 0;
-    width: 28%;
+    width: 25%;
 }
 
 .main-content {
@@ -245,6 +245,7 @@ sub {
 
 .main-content.shaded {
     background-color: #F0F0F0;
+    border-radius: .25rem;
 }
 
 .main-content-title {
@@ -259,159 +260,41 @@ sub {
     padding: 10px;
 }
 
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
-.card > hr {
-  margin-right: 0;
-  margin-left: 0;
-}
-.card > .list-group {
-  border-top: inherit;
-  border-bottom: inherit;
-}
-.card > .list-group:first-child {
-  border-top-width: 0;
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-}
-.card > .list-group:last-child {
-  border-bottom-width: 0;
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px);
-}
-.card > .card-header + .list-group,
-.card > .list-group + .card-footer {
-  border-top: 0;
-}
-
-.card-body {
-  flex: 1 1 auto;
-  padding: 1rem 1rem;
-}
-
-.card-title {
-  margin-bottom: 0.5rem;
-}
-
-.card-subtitle {
-  margin-top: -0.25rem;
-  margin-bottom: 0;
-}
-
-.card-text:last-child {
-  margin-bottom: 0;
-}
-
-.card-link + .card-link {
-  margin-left: 1rem;
-}
-
-.card-header {
-  padding: 0.5rem 1rem;
-  margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-}
-.card-header:first-child {
-  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
-}
-
-.card-footer {
-  padding: 0.5rem 1rem;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
-}
-.card-footer:last-child {
-  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
-}
-
-.card-header-tabs {
-  margin-right: -0.5rem;
-  margin-bottom: -0.5rem;
-  margin-left: -0.5rem;
-  border-bottom: 0;
-}
-
-.card-header-pills {
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.card-img-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  border-radius: calc(0.25rem - 1px);
-}
-
-.card-img,
-.card-img-top,
-.card-img-bottom {
-  width: 100%;
-}
-
-.card-img,
-.card-img-top {
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-}
-
-.card-img,
-.card-img-bottom {
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px);
-}
-
-.card-group > .card {
-  margin-bottom: 0.75rem;
-}
-@media (min-width: 576px) {
-  .card-group {
+.card{
+    position: relative;
     display: flex;
-    flex-flow: row wrap;
-  }
-  .card-group > .card {
-    flex: 1 0 0%;
-    margin-bottom: 0;
-  }
-  .card-group > .card + .card {
-    margin-left: 0;
-    border-left: 0;
-  }
-  .card-group > .card:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  .card-group > .card:not(:last-child) .card-img-top,
-.card-group > .card:not(:last-child) .card-header {
-    border-top-right-radius: 0;
-  }
-  .card-group > .card:not(:last-child) .card-img-bottom,
-.card-group > .card:not(:last-child) .card-footer {
-    border-bottom-right-radius: 0;
-  }
-  .card-group > .card:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .card-group > .card:not(:first-child) .card-img-top,
-.card-group > .card:not(:first-child) .card-header {
-    border-top-left-radius: 0;
-  }
-  .card-group > .card:not(:first-child) .card-img-bottom,
-.card-group > .card:not(:first-child) .card-footer {
-    border-bottom-left-radius: 0;
-  }
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #0066CC;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-bottom: 8px;
 }
+
+.card-header{
+    padding: 2px!important;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card-body{
+    flex: 1 1 auto;
+    padding: 10px!important;
+}
+
+.card-footer{
+    padding: 2px!important;
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+
+.text-center{
+    text-align: center!important;
+}
+
+.text-white{
+    color: #FFFFFF!important;
+}
+
