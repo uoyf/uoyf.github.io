@@ -9,7 +9,7 @@
 	
 	    <meta charset="UTF-8">
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<script type="text/javascript" src="//api.map.baidu.com/api?v=3.0&ak=DRm6EuWtWSFtZyz87mz8oB2KgpVzkbuE"></script>
 <!--<style type="text/css">
 body, html,#container {width: 80%;height: 80%;margin:20px;font-family:"微软雅黑";}
@@ -133,14 +133,15 @@ body, html,#container {width: 80%;height: 80%;margin:20px;font-family:"微软雅
             从紫竹万怡酒店到华东师范大学闵行校区光学大楼约2.5公里，会议安排短驳车接送。参会代表也可自行步行前往，或乘坐公交729路或闵行38路前往。
           </div>
          <!-- <div class="main-content-paragraph"><img src="images/map.png" title="Route" width="100%"></div>-->
-			   
+			   <div class="main-content-paragraph" style="width:786px;height: 700px;">
 				<!--百度地图-->
-<div class="main-content-paragraph" id="container" style="width: 776px;height: 700px;margin:10px;font-family:微软雅黑;"></div>
+<div id="container" style="width: 100%;height: 100%;margin:10px;font-family:微软雅黑;"></div>
 <script type="text/javascript">
 var map = new BMap.Map("container"); 
-map.centerAndZoom(new BMap.Point(121.471616,31.027524), 14); 
-
-var riding = new BMap.RidingRoute(map, { 
+	
+map.centerAndZoom(new BMap.Point(121.456726,31.039055), 11); 
+        	
+var walking = new BMap.WalkingRoute(map, { 
     renderOptions: { 
         map: map, 
         autoViewport: true 
@@ -148,14 +149,17 @@ var riding = new BMap.RidingRoute(map, {
 });
 var start = new BMap.Point(121.471616,31.027524);
 var end = new BMap.Point(121.456726,31.039055);
-riding.search(start, end);
-		    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-    var scaleCtrl = new BMapGL.ScaleControl();  // 添加比例尺控件
+walking.search(start, end);
+   map.enableScrollWheelZoom();
+	    var scaleCtrl = new BMapGL.ScaleControl();  // 添加比例尺控件
     map.addControl(scaleCtrl);
     var zoomCtrl = new BMapGL.ZoomControl();  // 添加比例尺控件
     map.addControl(zoomCtrl);
 </script>
-		  </div></div>
+			</div>
+		  </div>
+		  
+		</div>
 		 
       <div class="main-content-right">
         <div class="main-content shaded">
