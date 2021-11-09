@@ -7,33 +7,13 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=0DhyhmesoyDHMCGc2ycGH28jG5isTZCI"></script>
-	<style>
-        html,body{
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        #allmap{
-            width: 100%;
-            height: 100%
-        }
-        #result{
-            position: fixed;
-            top: 10px;
-            left: 20px;
-            width: 250px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            background: #fff;
-            box-shadow: 0 2px 6px 0 rgba(27, 142, 236, 0.5);
-            border-radius: 7px;
-            z-index: 99;
-        }
-    </style>
+	    <meta charset="UTF-8">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<script type="text/javascript" src="//api.map.baidu.com/api?v=3.0&ak=DRm6EuWtWSFtZyz87mz8oB2KgpVzkbuE"></script>
+<!--<style type="text/css">
+body, html,#container {width: 80%;height: 80%;margin:20px;font-family:"微软雅黑";}
+</style>-->
 </head>
 <body>
 <div class="page-header">
@@ -152,12 +132,31 @@
           <div class="main-content-paragraph">
             从紫竹万怡酒店到华东师范大学闵行校区光学大楼约2.5公里，会议安排短驳车接送。参会代表也可自行步行前往，或乘坐公交729路或闵行38路前往。
           </div>
-          <div class="main-content-paragraph"><img src="images/map.png" title="Route" width="100%"></div>
-			<!--百度地图-->
+         <!-- <div class="main-content-paragraph"><img src="images/map.png" title="Route" width="100%"></div>-->
+			   
+				<!--百度地图-->
+<div class="main-content-paragraph" id="container" style="width: 780px;height: 700px;margin:10px;font-family:微软雅黑;"></div>
+<script type="text/javascript">
+var map = new BMap.Map("container"); 
+map.centerAndZoom(new BMap.Point(121.471616,31.027524), 14); 
 
-			
-        </div>
-      </div>
+var riding = new BMap.RidingRoute(map, { 
+    renderOptions: { 
+        map: map, 
+        autoViewport: true 
+    }
+});
+var start = new BMap.Point(121.471616,31.027524);
+var end = new BMap.Point(121.456726,31.039055);
+riding.search(start, end);
+		    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    var scaleCtrl = new BMapGL.ScaleControl();  // 添加比例尺控件
+    map.addControl(scaleCtrl);
+    var zoomCtrl = new BMapGL.ZoomControl();  // 添加比例尺控件
+    map.addControl(zoomCtrl);
+</script>
+		  </div></div>
+		 
       <div class="main-content-right">
         <div class="main-content shaded">
           <div class="main-content-title">
@@ -206,6 +205,8 @@
       </div>
     </div>
   </div>
-</div>
+
+	</div>
+
 </body>
 </html>
