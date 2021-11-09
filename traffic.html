@@ -6,6 +6,17 @@
 <meta name="description" content="Website template designed by Hongcheng Ni" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+	<style type="text/css">  
+html{height:100%}  
+body{height:100%;margin:0px;padding:0px}  
+#container{height:100%}  
+</style>  
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=DRm6EuWtWSFtZyz87mz8oB2KgpVzkbuE">
+//v2.0版本的引用方式：src="https://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+</script>
 </head>
 <body>
 <div class="page-header">
@@ -125,6 +136,17 @@
             从紫竹万怡酒店到华东师范大学闵行校区光学大楼约2.5公里，会议安排短驳车接送。参会代表也可自行步行前往，或乘坐公交729路或闵行38路前往。
           </div>
           <div class="main-content-paragraph"><img src="images/map.png" title="Route" width="100%"></div>
+			<!--百度地图-->
+			<div id="container"></div> 
+<script type="text/javascript"> 
+var map = new BMap.Map("container");
+// 创建地图实例  
+var point = new BMap.Point(116.404, 39.915);
+// 创建点坐标  
+map.centerAndZoom(point, 15);
+// 初始化地图，设置中心点坐标和地图级别  
+</script> 
+			
         </div>
       </div>
       <div class="main-content-right">
